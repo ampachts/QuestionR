@@ -1,4 +1,32 @@
-/******************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: script.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: script.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/******************************************
     BackOffice javascript functions
 ******************************************/
 
@@ -49,7 +77,7 @@ var global = {
 };
 
 /**
- * manages pages & events
+ * manages pages &amp; events
  * @type {Object}
  */
 var actions = {
@@ -359,7 +387,7 @@ var load = {
 
                 if(admin.length != 0){
                     admin = admin[0];
-                    if(admin.user_email == $('#adminMail').val() && admin.user_password == $('#adminPass').val()){
+                    if(admin.user_email == $('#adminMail').val() &amp;&amp; admin.user_password == $('#adminPass').val()){
                         window.location.href = './index.php';
                     }else
                         alert('invalid username/password !');
@@ -551,18 +579,18 @@ var erotimatologia = {
                 var tappend = '';
                 
                 $.each(json,function(key,value){
-                    tappend+='<tr class="pageEntry" id="er_'+value.er_id+'" key="'+value.er_id+'" img="'+value.er_image+'">'+
-                             '<td>'+value.er_title+'</td>'+
-                             '<td>'+value.er_description+'</td>'+
-                             (value.er_active == 1?'<td>Yes</td>':'<td>No</td>')+
-                             '<td>'+value.er_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editErotimatologio"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteErotimatologio"><i class="fa fa-times"></i></button> &nbsp '+
-                                '<button title="categories" type="button" class="btn btn-warning btn-circle listCategories"><i class="fa fa-list"></i></button> &nbsp '+
-                                '<button title="results" type="button" class="btn btn-success btn-circle listErRes"><i class="fa fa-list"></i></button>'+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="er_'+value.er_id+'" key="'+value.er_id+'" img="'+value.er_image+'">'+
+                             '&lt;td>'+value.er_title+'&lt;/td>'+
+                             '&lt;td>'+value.er_description+'&lt;/td>'+
+                             (value.er_active == 1?'&lt;td>Yes&lt;/td>':'&lt;td>No&lt;/td>')+
+                             '&lt;td>'+value.er_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editErotimatologio">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteErotimatologio">&lt;i class="fa fa-times">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="categories" type="button" class="btn btn-warning btn-circle listCategories">&lt;i class="fa fa-list">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="results" type="button" class="btn btn-success btn-circle listErRes">&lt;i class="fa fa-list">&lt;/i>&lt;/button>'+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                 });
 
                 $('#dataTable tbody').html(tappend);
@@ -602,7 +630,7 @@ var erotimatologia = {
                 $('#er_title').val(json.er_title);
                 $('#er_descr').val(json.er_description);
                 (json.er_active == 1?$('#er_active').prop( "checked", true ):$('#er_active').prop( "checked", false ));
-                $('#file').append('<span>'+json.er_image+'</span>');
+                $('#file').append('&lt;span>'+json.er_image+'&lt;/span>');
 
             }
         });
@@ -793,21 +821,21 @@ var categories = {
                 var er_title = '';
 
                 $.each(json,function(key,value){
-                    tappend+='<tr class="pageEntry" id="cat_'+value.cat_id+'" key="'+value.cat_id+'" img="'+value.cat_image+'">'+
-                             '<td>'+value.cat_title+'</td>'+
-                             '<td>'+value.cat_description+'</td>'+
-                             '<td>'+value.cat_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editCategory"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteCategory"><i class="fa fa-times"></i></button> &nbsp '+
-                                '<button title="questions" type="button" class="btn btn-warning btn-circle listQuestions"><i class="fa fa-list"></i></button> &nbsp '+
-                                '<button title="results" type="button" class="btn btn-success btn-circle listCatRes"><i class="fa fa-list"></i></button>'+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="cat_'+value.cat_id+'" key="'+value.cat_id+'" img="'+value.cat_image+'">'+
+                             '&lt;td>'+value.cat_title+'&lt;/td>'+
+                             '&lt;td>'+value.cat_description+'&lt;/td>'+
+                             '&lt;td>'+value.cat_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editCategory">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteCategory">&lt;i class="fa fa-times">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="questions" type="button" class="btn btn-warning btn-circle listQuestions">&lt;i class="fa fa-list">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="results" type="button" class="btn btn-success btn-circle listCatRes">&lt;i class="fa fa-list">&lt;/i>&lt;/button>'+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                     er_title = value.er_title;
                 });
                 
-                $('#erotim').html('<i class="fa fa-backward"></i>  ' + er_title);
+                $('#erotim').html('&lt;i class="fa fa-backward">&lt;/i>  ' + er_title);
                 $('#dataTable tbody').html(tappend);
                 $('#dataTable').DataTable({
                     responsive: true
@@ -843,7 +871,7 @@ var categories = {
                 $('.panel-heading').text('Edit Category');
                 $('#cat_title').val(json.cat_title);
                 $('#cat_descr').val(json.cat_description);
-                $('#file').append('<span>'+json.cat_image+'</span>');
+                $('#file').append('&lt;span>'+json.cat_image+'&lt;/span>');
                 $('#cat_color').val(json.cat_color);
 
             }
@@ -1053,21 +1081,21 @@ var questions = {
                         default:
                             break;
                     }
-                    tappend+='<tr class="pageEntry" id="q_'+value.q_id+'" key="'+value.q_id+'">'+
-                             '<td>'+value.q_question+'</td>'+
-                             '<td>'+value.q_order+'</td>'+
-                             '<td>'+type+'</td>'+
-                             '<td>'+value.q_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editQuestion"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteQuestion"><i class="fa fa-times"></i></button> &nbsp '+
-                                '<button title="answers" type="button" class="btn btn-warning btn-circle listAnswers"><i class="fa fa-list"></i></button>'+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="q_'+value.q_id+'" key="'+value.q_id+'">'+
+                             '&lt;td>'+value.q_question+'&lt;/td>'+
+                             '&lt;td>'+value.q_order+'&lt;/td>'+
+                             '&lt;td>'+type+'&lt;/td>'+
+                             '&lt;td>'+value.q_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editQuestion">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteQuestion">&lt;i class="fa fa-times">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="answers" type="button" class="btn btn-warning btn-circle listAnswers">&lt;i class="fa fa-list">&lt;/i>&lt;/button>'+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                     cat_title = value.cat_title;
                 });
                 
-                $('#categ').html('<i class="fa fa-backward"></i>  ' + cat_title);
+                $('#categ').html('&lt;i class="fa fa-backward">&lt;/i>  ' + cat_title);
                 $('#dataTable tbody').html(tappend);
                 $('#dataTable').DataTable({
                     responsive: true
@@ -1268,19 +1296,19 @@ var answers = {
                 var question = '';
                 
                 $.each(json,function(key,value){
-                    tappend+='<tr class="pageEntry" id="ans_'+value.ans_id+'" key="'+value.ans_id+'">'+
-                             '<td>'+value.ans_text+'</td>'+
-                             '<td>'+value.ans_weight+'</td>'+
-                             '<td>'+value.ans_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editAnswer"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteAnswer"><i class="fa fa-times"></i></button> '+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="ans_'+value.ans_id+'" key="'+value.ans_id+'">'+
+                             '&lt;td>'+value.ans_text+'&lt;/td>'+
+                             '&lt;td>'+value.ans_weight+'&lt;/td>'+
+                             '&lt;td>'+value.ans_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editAnswer">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteAnswer">&lt;i class="fa fa-times">&lt;/i>&lt;/button> '+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                     question = value.q_question;
                 });
                 
-                $('#quest').html('<i class="fa fa-backward"></i>  ' + question);
+                $('#quest').html('&lt;i class="fa fa-backward">&lt;/i>  ' + question);
                 $('#dataTable tbody').html(tappend);
                 $('#dataTable').DataTable({
                     responsive: true
@@ -1474,19 +1502,19 @@ var catres = {
                 var cat_title = '';
                 
                 $.each(json,function(key,value){
-                    tappend+='<tr class="pageEntry" id="cr_'+value.cr_id+'" key="'+value.cr_id+'" img="'+value.cr_image+'">'+
-                             '<td>'+value.cr_text+'</td>'+
-                             '<td>'+value.cr_weightFrom+' - '+value.cr_weightTo+'</td>'+
-                             '<td>'+value.cr_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editCatRes"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteCatRes"><i class="fa fa-times"></i></button> '+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="cr_'+value.cr_id+'" key="'+value.cr_id+'" img="'+value.cr_image+'">'+
+                             '&lt;td>'+value.cr_text+'&lt;/td>'+
+                             '&lt;td>'+value.cr_weightFrom+' - '+value.cr_weightTo+'&lt;/td>'+
+                             '&lt;td>'+value.cr_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editCatRes">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteCatRes">&lt;i class="fa fa-times">&lt;/i>&lt;/button> '+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                     cat_title = value.cat_title;
                 });
                 
-                $('#categ').html('<i class="fa fa-backward"></i>  ' + cat_title);
+                $('#categ').html('&lt;i class="fa fa-backward">&lt;/i>  ' + cat_title);
                 $('#dataTable tbody').html(tappend);
                 $('#dataTable').DataTable({
                     responsive: true
@@ -1523,7 +1551,7 @@ var catres = {
                 $('#cr_txt').val(json.cr_text);
                 $('#cr_wgA').val(json.cr_weightFrom);
                 $('#cr_wgB').val(json.cr_weightTo);
-                $('#file').append('<span>'+json.cr_image+'</span>');
+                $('#file').append('&lt;span>'+json.cr_image+'&lt;/span>');
 
             }
         });
@@ -1718,19 +1746,19 @@ var erres = {
                 var er_title = '';
                 
                 $.each(json,function(key,value){
-                    tappend+='<tr class="pageEntry" id="err_'+value.err_id+'" key="'+value.err_id+'" img="'+value.err_image+'">'+
-                             '<td>'+value.err_text+'</td>'+
-                             '<td>'+value.err_weightFrom+' - '+value.err_weightTo+'</td>'+
-                             '<td>'+value.err_created+'</td>'+
-                             '<td class="center">'+
-                                '<button title="edit" type="button" class="btn btn-info btn-circle editErRes"><i class="fa fa-edit"></i></button> &nbsp '+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteErRes"><i class="fa fa-times"></i></button> '+
-                             '</td>'+
-                             '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="err_'+value.err_id+'" key="'+value.err_id+'" img="'+value.err_image+'">'+
+                             '&lt;td>'+value.err_text+'&lt;/td>'+
+                             '&lt;td>'+value.err_weightFrom+' - '+value.err_weightTo+'&lt;/td>'+
+                             '&lt;td>'+value.err_created+'&lt;/td>'+
+                             '&lt;td class="center">'+
+                                '&lt;button title="edit" type="button" class="btn btn-info btn-circle editErRes">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp '+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteErRes">&lt;i class="fa fa-times">&lt;/i>&lt;/button> '+
+                             '&lt;/td>'+
+                             '&lt;/tr>';
                     er_title = value.er_title;
                 });
                 
-                $('#erot').html('<i class="fa fa-backward"></i>  ' + er_title);
+                $('#erot').html('&lt;i class="fa fa-backward">&lt;/i>  ' + er_title);
                 $('#dataTable tbody').html(tappend);
                 $('#dataTable').DataTable({
                     responsive: true
@@ -1767,7 +1795,7 @@ var erres = {
                 $('#err_txt').val(json.err_text);
                 $('#err_wgA').val(json.err_weightFrom);
                 $('#err_wgB').val(json.err_weightTo);
-                $('#file').append('<span>'+json.err_image+'</span>');
+                $('#file').append('&lt;span>'+json.err_image+'&lt;/span>');
 
             }
         });
@@ -1960,13 +1988,13 @@ var users = {
                 var tappend = '';
                 $.each(json,function(key,value){
                     global.users.push({id:value.user_id,name:value.user_name,email:value.user_email});
-                    tappend+='<tr class="pageEntry" id="u_'+value.user_id+'" key="'+value.user_id+'">'+
-                                '<td>'+value.user_email+'</td>'+
-                                '<td>'+value.user_name+'</td>'+
-                                '<td>'+value.user_created+'</td>'+
-                                '<td class="center"><button title="edit" type="button" class="btn btn-info btn-circle editUser"><i class="fa fa-edit"></i></button> &nbsp'+
-                                '<button title="delete" type="button" class="btn btn-danger btn-circle deleteUser"><i class="fa fa-times"></i></button></td>'+
-                              '</tr>';
+                    tappend+='&lt;tr class="pageEntry" id="u_'+value.user_id+'" key="'+value.user_id+'">'+
+                                '&lt;td>'+value.user_email+'&lt;/td>'+
+                                '&lt;td>'+value.user_name+'&lt;/td>'+
+                                '&lt;td>'+value.user_created+'&lt;/td>'+
+                                '&lt;td class="center">&lt;button title="edit" type="button" class="btn btn-info btn-circle editUser">&lt;i class="fa fa-edit">&lt;/i>&lt;/button> &amp;nbsp'+
+                                '&lt;button title="delete" type="button" class="btn btn-danger btn-circle deleteUser">&lt;i class="fa fa-times">&lt;/i>&lt;/button>&lt;/td>'+
+                              '&lt;/tr>';
                 });
                 $('#dataTable tbody').html(tappend);
                 
@@ -2146,3 +2174,26 @@ var users = {
 };
 
 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#actions">actions</a></li><li><a href="global.html#answers">answers</a></li><li><a href="global.html#categories">categories</a></li><li><a href="global.html#catres">catres</a></li><li><a href="global.html#erotimatologia">erotimatologia</a></li><li><a href="global.html#erres">erres</a></li><li><a href="global.html#global">global</a></li><li><a href="global.html#global#load">load</a></li><li><a href="global.html#global#questions">questions</a></li><li><a href="global.html#global#users">users</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Aug 02 2016 16:44:37 GMT+0300 (EEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

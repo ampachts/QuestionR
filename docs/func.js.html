@@ -1,4 +1,32 @@
-/******************************************
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: func.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: func.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/******************************************
 	frontEnd javascript functions
 ******************************************/
 
@@ -25,7 +53,7 @@ var global = {
 };
 
 /**
- * manages pages & events
+ * manages pages &amp; events
  * @type {Object}
  */
 var actions = {
@@ -115,10 +143,10 @@ var data = {
                 
                 $.each(json,function(key,value){
 
-                    tappend += '<div class="col-md-3 col-sm-6 hero-feature"><div id="'+value.er_id+'" class="thumbnail">'+
-                                '<img src="./uploads/'+value.er_image+'" class="img-responsive img-rounded" /><div class="caption">'+
-                                '<h3>'+value.er_title+'</h3><p>'+value.er_description+'</p>'+
-                                '<p><a class="btn btn-primary item">Answer</a></p></div></div></div>';
+                    tappend += '&lt;div class="col-md-3 col-sm-6 hero-feature">&lt;div id="'+value.er_id+'" class="thumbnail">'+
+                                '&lt;img src="./uploads/'+value.er_image+'" class="img-responsive img-rounded" />&lt;div class="caption">'+
+                                '&lt;h3>'+value.er_title+'&lt;/h3>&lt;p>'+value.er_description+'&lt;/p>'+
+                                '&lt;p>&lt;a class="btn btn-primary item">Answer&lt;/a>&lt;/p>&lt;/div>&lt;/div>&lt;/div>';
 
                 });
 
@@ -149,15 +177,15 @@ var data = {
             },
             success: function(json) {
                 
-                var categories = '<li class="sidebar-brand"><a href="./page.php">' + json[0].er_title + '</a><p>' + json[0].er_description + '</p></li><hr>';
+                var categories = '&lt;li class="sidebar-brand">&lt;a href="./page.php">' + json[0].er_title + '&lt;/a>&lt;p>' + json[0].er_description + '&lt;/p>&lt;/li>&lt;hr>';
                 var questions = '';
 
                 $.each(json,function(key,value){
                     
-                    categories += '<li><a data-toggle="pill" href="#cat_' + value.cat_id + '">' + value.cat_title + '</a></li>';
-                    questions += '<div id="cat_'+value.cat_id+'" class="tab-pane fade catVal">' +
-                                '<div class="row"><div class="col-lg-4"><img class="img-responsive img-rounded" src="uploads/'+value.cat_image+'" /></div>' +
-                                '<div class="col-lg-8"><h1>' + value.cat_title + '</h1><p>' + value.cat_description + '</p></div></div><hr />';
+                    categories += '&lt;li>&lt;a data-toggle="pill" href="#cat_' + value.cat_id + '">' + value.cat_title + '&lt;/a>&lt;/li>';
+                    questions += '&lt;div id="cat_'+value.cat_id+'" class="tab-pane fade catVal">' +
+                                '&lt;div class="row">&lt;div class="col-lg-4">&lt;img class="img-responsive img-rounded" src="uploads/'+value.cat_image+'" />&lt;/div>' +
+                                '&lt;div class="col-lg-8">&lt;h1>' + value.cat_title + '&lt;/h1>&lt;p>' + value.cat_description + '&lt;/p>&lt;/div>&lt;/div>&lt;hr />';
 
                     $.ajax({
                         dataType: 'JSON',
@@ -172,9 +200,9 @@ var data = {
 
                             $.each(json2, function(k,v){
                                 
-                                questions += '<div id="q_'+v.q_id+'" class="row q-'+value.cat_id+'" data-toggle="tooltip" data-placement="top" title="'+v.q_helptext+'"><div class="col-lg-12 text-center">' +
-                                            '<h2>Question '+(k+1)+'</h2><p><b>'+v.q_question+'</b></p><br />' +
-                                            '<form class="form-inline" role="form"><div class="form-group">';
+                                questions += '&lt;div id="q_'+v.q_id+'" class="row q-'+value.cat_id+'" data-toggle="tooltip" data-placement="top" title="'+v.q_helptext+'">&lt;div class="col-lg-12 text-center">' +
+                                            '&lt;h2>Question '+(k+1)+'&lt;/h2>&lt;p>&lt;b>'+v.q_question+'&lt;/b>&lt;/p>&lt;br />' +
+                                            '&lt;form class="form-inline" role="form">&lt;div class="form-group">';
 
                                 $.ajax({
                                     dataType: 'JSON',
@@ -190,9 +218,9 @@ var data = {
                                         $.each(json3, function(i,j) {
 
                                             if (v.q_type == 2) {
-                                                questions += '<label class="radio-inline"><input id="ans_'+j.ans_id+'" class="ans-'+v.q_id+'" type="radio" name="optradio'+k+'" value="'+j.ans_weight+'">'+j.ans_text+'</label>';
+                                                questions += '&lt;label class="radio-inline">&lt;input id="ans_'+j.ans_id+'" class="ans-'+v.q_id+'" type="radio" name="optradio'+k+'" value="'+j.ans_weight+'">'+j.ans_text+'&lt;/label>';
                                             } else{
-                                                questions += '<label class="checkbox-inline"><input id="ans_'+j.ans_id+'" class="ans-'+v.q_id+'" type="checkbox" value="'+j.ans_weight+'">'+j.ans_text+'</label>';
+                                                questions += '&lt;label class="checkbox-inline">&lt;input id="ans_'+j.ans_id+'" class="ans-'+v.q_id+'" type="checkbox" value="'+j.ans_weight+'">'+j.ans_text+'&lt;/label>';
                                             };
                                             
                                         });
@@ -202,18 +230,18 @@ var data = {
 
                                 
 
-                                questions +=  '</div></form></div></div><br /><br /><br />';
+                                questions +=  '&lt;/div>&lt;/form>&lt;/div>&lt;/div>&lt;br />&lt;br />&lt;br />';
 
                             });
 
                         }
                     });
 
-                    questions += '<hr /></div>';
+                    questions += '&lt;hr />&lt;/div>';
 
                 });
 
-                categories += '<hr><li><button type="button" class="btn btn-danger btn-block submitEr">Send answers</button></li>';
+                categories += '&lt;hr>&lt;li>&lt;button type="button" class="btn btn-danger btn-block submitEr">Send answers&lt;/button>&lt;/li>';
 
                 $('.sidebar-nav').html(categories);
                 $('.sidebar-nav li:nth-child(3)').addClass('active');
@@ -226,15 +254,15 @@ var data = {
     },
 
     /**
-     * calculate results for the specific answers & shows them in modal window
+     * calculate results for the specific answers &amp; shows them in modal window
      */
     results : function(){
 
         var valid = 0;
         var storedReply = [];
         var erPoints = 0;
-        var result = '<div class="modal-header"><button type="button" class="close closeResult" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                        '<h4 class="modal-title text-center">Results</h4></div><div class="modal-body">';
+        var result = '&lt;div class="modal-header">&lt;button type="button" class="close closeResult" aria-label="Close">&lt;span aria-hidden="true">&amp;times;&lt;/span>&lt;/button>' +
+                        '&lt;h4 class="modal-title text-center">Results&lt;/h4>&lt;/div>&lt;div class="modal-body">';
 
         $('.catVal').each(function(i,j){
             
@@ -274,9 +302,9 @@ var data = {
                 success: function(res1) {
                     
                     res1 = res1[0];
-                    result += '<div class="row"><div class="col-md-2 text-center"><b>' + res1.cat_title + ':</b></div>' +
-                            '<div class="col-md-3 text-center"><img src="uploads/' + res1.cr_image + '" class="img-responsive img-thumbnail img-rounded" style="max-height: 60px;"></div>' +
-                            '<div class="col-md-7 text-center"><p>' + res1.cr_text + '</p></div></div><hr>';
+                    result += '&lt;div class="row">&lt;div class="col-md-2 text-center">&lt;b>' + res1.cat_title + ':&lt;/b>&lt;/div>' +
+                            '&lt;div class="col-md-3 text-center">&lt;img src="uploads/' + res1.cr_image + '" class="img-responsive img-thumbnail img-rounded" style="max-height: 60px;">&lt;/div>' +
+                            '&lt;div class="col-md-7 text-center">&lt;p>' + res1.cr_text + '&lt;/p>&lt;/div>&lt;/div>&lt;hr>';
 
                 }
             });
@@ -297,10 +325,10 @@ var data = {
                 success: function(res2) {
                     
                     res2 = res2[0];
-                    result += '<div class="row"><div class="col-md-12 text-center"><h3>' + res2.er_title + '</h3></div>' +
-                                '<div class="col-md-12 text-center"><img src="uploads/' + res2.err_image + '" class="img-responsive img-thumbnail img-rounded" style="max-height: 120px;"></div>' +
-                                '<div class="col-md-12 text-center"><p>' + res2.err_text + '</p></div></div></div>' +
-                                '<div class="modal-footer"><button type="button" class="btn btn-default closeResult">Exit</button></div>';
+                    result += '&lt;div class="row">&lt;div class="col-md-12 text-center">&lt;h3>' + res2.er_title + '&lt;/h3>&lt;/div>' +
+                                '&lt;div class="col-md-12 text-center">&lt;img src="uploads/' + res2.err_image + '" class="img-responsive img-thumbnail img-rounded" style="max-height: 120px;">&lt;/div>' +
+                                '&lt;div class="col-md-12 text-center">&lt;p>' + res2.err_text + '&lt;/p>&lt;/div>&lt;/div>&lt;/div>' +
+                                '&lt;div class="modal-footer">&lt;button type="button" class="btn btn-default closeResult">Exit&lt;/button>&lt;/div>';
                     $('.modal-content').html(result);
                     
                     $.each(storedReply, function(index,obj){$.ajax({dataType:'JSON',async:false,type:'POST',url:global.domain,data:{do:'insertStoredReply',question:obj.q,answer:obj.a}});});
@@ -326,3 +354,26 @@ if (!Array.prototype.last){
     };
 };
 
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#actions">actions</a></li><li><a href="global.html#data">data</a></li><li><a href="global.html#global">global</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Aug 02 2016 16:44:32 GMT+0300 (EEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
