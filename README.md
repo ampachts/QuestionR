@@ -14,7 +14,7 @@ External tools:
 - Bootstrap 3.3.4
 - Datatables 1.10.6
 - Font Awesome 4.2.0
-- Start Bootstrap sb-admin2 template
+- SB Admin 2 Bootstrap Admin Theme
 
 ### Installation
 
