@@ -2,15 +2,19 @@
 QuestionR is a Web application for creating &amp; managing questionaires
 
 Contains:
-- front end interface for users to answer the questionaires (javascript/html/css)
-- admin panel for administrators to create the questionaires (javascript/html/css)
-- Back end (php) & database dump file with tables & procedures (mysql)
 
-External libraries:
+1. front end
+  - user interface to answer the questionaires (javascript/html/css)
+  - admin panel to create the questionaires (javascript/html/css)
+2. Back end (php)
+3. database schema dump file (mysql)
+
+External tools:
 - jquery 2.1.3
 - Bootstrap 3.3.4
 - Datatables 1.10.6
 - Font Awesome 4.2.0
+- Start Bootstrap sb-admin2 template
 
 ### Installation
 
