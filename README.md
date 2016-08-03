@@ -23,3 +23,4 @@ Installation is simple, just follow the steps below:
 1. clone repository on your localhost folder
 2. create a new mysql database & import the dump file (db/questionr.sql)
 3. open the file libs/mysql.php & change `$user`, `$password`, `$database` with your mysql credentials
+4. open a browser & go to `localhost/QuestionR` or login to `localhost/QusetionR/admin` with admin/admin
